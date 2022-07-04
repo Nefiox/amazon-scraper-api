@@ -65,6 +65,7 @@ app.get("/products/:productId/offers", async (req, res) => {
 // GET Search Results
 app.get("/search/:searchQuery", async (req, res) => {
   const { searchQuery } = req.params;
+  const { apiKey } = req.query;
 
   try {
     const response = await request(
